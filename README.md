@@ -1,61 +1,78 @@
-# IMSAI 8080 for MiSTer — Prototype
+# IMSAI 8080 for MiSTer â€” Prototype
 
-**Build 1 October 2026 · MiSTer by Toby**
+**Front-panel update Â· 23 October 2026 Â· MiSTer by Toby**
 
-An experimental IMSAI 8080 FPGA core with a green terminal, a virtual LED front panel and historical programs. The idea came from Toby; development was assisted by OpenAI Codex. See [CREDITS.md](CREDITS.md) for component authors.
+An experimental IMSAI 8080 FPGA core with a green terminal, a virtual LED front
+panel and historical programs. The idea came from Toby; development was assisted
+by OpenAI Codex. See [CREDITS.md](CREDITS.md) for component authors.
 
-![IMSAI 8080 — AI-generated illustration](imsai-8080-ai-illustration.png)
+## What's new
 
-*AI-generated illustration of the IMSAI 8080; not an original photograph.*
+- Terminal (80 columns Ã— 16 rows) and the smaller front panel share one screen.
+- **F7** enlarges the front panel; press F7 again to return. Program execution and
+  terminal contents continue across view changes.
+- Original-style artwork with live output, CPU-status, address and data lamps.
+- Existing RUN/STOP, memory controls and LED-game inputs are retained.
 
-## Download
+![Terminal and front panel together â€” actual MiSTer screenshot](front-panel-combined.png)
 
-Get the complete installation ZIP from [Releases](https://github.com/toby01019/IMSAI8080-MiSTer/releases). The ZIP includes the full source tree and build/test scripts in Sources.
+![F7 enlarged front panel â€” actual MiSTer screenshot](front-panel-f7.png)
 
-## Install on your MiSTer SD card
+The panel artwork is an AI-generated interpretation of a reference photograph,
+not a scan of an original faceplate. The screenshots show the actual FPGA output.
+STEP and POWER are displayed but have no implemented action.
 
-1. Extract the complete ZIP on your computer first.
-2. Open the extracted package, then its **SD** folder.
-3. Copy **_Computer** and **games** to the **top level of the MiSTer SD card**, merging them with the existing folders. On MiSTer this location is `/media/fat`.
-4. Preserve your own modified IMSAI files before replacing matching files. Do not replace or remove other cores or games.
-5. Do not copy the enclosing package folder or SD folder onto the card. Do not create games/games or _Computer/_Computer.
-6. Start MiSTer and select an **IMSAI8080** launch entry in the **Computer** menu.
+## Download and installation
 
-| In this download | Destination on the SD card |
-| --- | --- |
-| SD/_Computer/IMSAI8080_20261001.rbf | /_Computer/IMSAI8080_20261001.rbf |
-| SD/_Computer/*.mgl (all seven entries) | /_Computer/ (keep their names) |
-| SD/games/IMSAI8080/ (complete folder) | /games/IMSAI8080/ |
+Download **IMSAI8080-MiSTer-Update-20261023.zip** from
+[Releases](https://github.com/toby01019/IMSAI8080-MiSTer/releases).
+The same [dated core](IMSAI8080_20261023.rbf) and seven `IMSAI8080 Update - ...mgl` launch entries
+are available directly in this repository; [build sources](Sources.zip) are included.
 
-With a card reader: shut down/power off MiSTer before removing the card; copy the folders, safely eject the card and reinsert it before powering on.
+This is an update for an existing installation. It does **not** bundle historical
+program runtimes. The launch entries reuse your existing `/games/IMSAI8080` files.
 
-With WinSCP: use your existing authorized MiSTer connection, open **/media/fat** on the remote side, and copy _Computer and games from SD into that directory. Merge folders and review existing matching IMSAI files before replacing them. Restart the selected entry after the transfer.
+1. Extract the ZIP on your computer.
+2. Copy the contents of `SD/_Computer` into `/_Computer` on the MiSTer SD card.
+3. Keep `IMSAI8080_20261001.rbf` and your old launch entries as a fallback.
+4. Start an **IMSAI8080 Update - ...** entry from the Computer menu.
 
-README, Documentation and Sources stay on your computer; only the contents of SD need copying to MiSTer. Nothing needs flashing into a core slot.
+The new core is `IMSAI8080_20261023.rbf`. Its launch entries use a separate
+`IMSAI8080_Update20261023` configuration. Do not replace other cores or games.
+The Amiga core is unrelated and is not changed by this update.
 
-## First checks
+## Controls
 
-- **IMSAI8080 - Terminal:** type HALLO and press Enter. Check the terminal responds.
-- **IMSAI8080 - Tiny BASIC:** try `PRINT 84/2` and Enter; expected result: 42.
-- **IMSAI8080 - Super Star Trek:** wait for automatic loading and COMMAND?, then try SRS and LRS. Restarting the entry starts over.
-- **IMSAI8080 - Kill the Lights:** use keys 1 to 8 for the INPUT switches.
+F1 RUN/STOP; F2 address; F3 byte; F4 write while stopped; F5/F6 next/previous
+address; **F7 combined/enlarged view**; F12 MiSTer menu. In Kill the Lights,
+keys 1â€“8 control the input switches. See [USER_GUIDE.md](USER_GUIDE.md).
 
-F1 toggles RUN/STOP. F2 selects an address, F3 prepares a byte, F4 writes it while stopped, F5/F6 examine adjacent addresses. F12 opens the MiSTer menu.
+## Hardware checks
 
-## User guide and pictures
+On Toby's MiSTer: both views and return switching, terminal echo, STOP/DEPOSIT
+(`MEM 8000 = A5`), BASIC (`PRINT 84/2` â†’ `42`), LED-game input, and Star Trek
+short- and long-range scans passed. Terminal contents were preserved across F7.
+This does not establish that a complete Star Trek mission has been tested.
 
-After extracting, open **Documentation/USER_GUIDE.html** in your browser for an offline guide with screenshots. No account or website is needed.
+![Memory examination and deposit on the updated core](front-panel-memory-check.png)
 
-The [Markdown user guide](USER_GUIDE.md) is also included. If your text editor does not follow the link, open the file directly from the Documentation folder.
+![Star Trek short-range scan on the updated core](super-star-trek-srs.png)
 
-![MiSTer front-panel memory test](front-panel-memory-check.png)
+![Star Trek long-range scan on the updated core](super-star-trek-lrs.png)
 
-![Super Star Trek short-range scan on MiSTer](super-star-trek-srs.png)
+Quartus 25.1 build: 10,444/41,910 ALMs (25%), 12,207 registers,
+292/553 RAM blocks (53%). Reported constrained paths pass: minimum setup slack
+0.451 ns and hold slack 0.246 ns. Quartus still reports incompletely constrained
+timing requirements. Simulation regressions and full video-raster checks passed.
 
-## Prototype limits and credits
+## Limits and credits
 
-This package contains the tested build of 1 October 2026. The core binary is unchanged. Keyboard punctuation and Ctrl-C support remain incomplete. Panel controls are monitor-style controls, rather than a complete historical CP-A circuit replica. A complete Super Star Trek game has not been tested.
+This remains a development prototype, not a complete historical CP-A circuit
+replica. STEP, POWER and starting execution at an examined address are not
+implemented. Keyboard punctuation and Ctrl-C support remain incomplete.
 
-Sources includes the project tree and build/test scripts; installed development tools are excluded. Individual component licenses and attribution remain in the sources and [licensing notes](SOURCES_AND_LICENSING.md). Historical programs are separate works. The bundled Microsoft/MITS BASIC runtime has no established redistribution permission; its provenance notes are retained.
+Individual component licenses and attribution remain in [Sources.zip](Sources.zip) and
+[licensing notes](SOURCES_AND_LICENSING.md). Historical programs are separate works;
+this update does not redistribute Microsoft/MITS BASIC runtime images.
 
 Suggestions, ideas and test reports are welcome.
