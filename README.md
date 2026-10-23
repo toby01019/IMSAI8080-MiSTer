@@ -24,6 +24,8 @@ STEP and POWER are displayed but have no implemented action.
 
 ## Download and installation
 
+Download the English update package and offline guide on **[itch.io](https://toby01019.itch.io/imsai8080-mister)**. Requires MiSTer hardware and your existing IMSAI8080 program files.
+
 Download **IMSAI8080-MiSTer-Update-20261023.zip** from
 [Releases](https://github.com/toby01019/IMSAI8080-MiSTer/releases).
 The same [dated core](IMSAI8080_20261023.rbf) and seven `IMSAI8080 Update - ...mgl` launch entries
