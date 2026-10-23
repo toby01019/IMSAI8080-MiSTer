@@ -1,6 +1,6 @@
-# IMSAI 8080 for MiSTer â€” Prototype
+# IMSAI 8080 for MiSTer -- Prototype
 
-**Front-panel update Â· 23 October 2026 Â· MiSTer by Toby**
+**Front-panel update / 23 October 2026 / MiSTer by Toby**
 
 An experimental IMSAI 8080 FPGA core with a green terminal, a virtual LED front
 panel and historical programs. The idea came from Toby; development was assisted
@@ -8,15 +8,15 @@ by OpenAI Codex. See [CREDITS.md](CREDITS.md) for component authors.
 
 ## What's new
 
-- Terminal (80 columns Ã— 16 rows) and the smaller front panel share one screen.
+- Terminal (80 columns x 16 rows) and the smaller front panel share one screen.
 - **F7** enlarges the front panel; press F7 again to return. Program execution and
   terminal contents continue across view changes.
 - Original-style artwork with live output, CPU-status, address and data lamps.
 - Existing RUN/STOP, memory controls and LED-game inputs are retained.
 
-![Terminal and front panel together â€” actual MiSTer screenshot](front-panel-combined.png)
+![Terminal and front panel together -- actual MiSTer screenshot](front-panel-combined.png)
 
-![F7 enlarged front panel â€” actual MiSTer screenshot](front-panel-f7.png)
+![F7 enlarged front panel -- actual MiSTer screenshot](front-panel-f7.png)
 
 The panel artwork is an AI-generated interpretation of a reference photograph,
 not a scan of an original faceplate. The screenshots show the actual FPGA output.
@@ -45,12 +45,12 @@ The Amiga core is unrelated and is not changed by this update.
 
 F1 RUN/STOP; F2 address; F3 byte; F4 write while stopped; F5/F6 next/previous
 address; **F7 combined/enlarged view**; F12 MiSTer menu. In Kill the Lights,
-keys 1â€“8 control the input switches. See [USER_GUIDE.md](USER_GUIDE.md).
+keys 1-8 control the input switches. See [USER_GUIDE.md](USER_GUIDE.md).
 
 ## Hardware checks
 
 On Toby's MiSTer: both views and return switching, terminal echo, STOP/DEPOSIT
-(`MEM 8000 = A5`), BASIC (`PRINT 84/2` â†’ `42`), LED-game input, and Star Trek
+(`MEM 8000 = A5`), BASIC (`PRINT 84/2` -> `42`), LED-game input, and Star Trek
 short- and long-range scans passed. Terminal contents were preserved across F7.
 This does not establish that a complete Star Trek mission has been tested.
 

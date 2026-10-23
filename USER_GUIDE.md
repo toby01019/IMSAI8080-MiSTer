@@ -1,6 +1,6 @@
-# User guide — 23 October 2026
+# User guide -- 23 October 2026
 
-The default screen combines the 80 × 16 terminal and smaller panel. F7 enlarges
+The default screen combines the 80 x 16 terminal and smaller panel. F7 enlarges
 the panel and returns without resetting the program. STEP and POWER are display-only.
 
 ## Starting a program
