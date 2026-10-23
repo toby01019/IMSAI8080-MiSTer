@@ -6,6 +6,8 @@ An experimental IMSAI 8080 FPGA core with a green terminal, a virtual LED front
 panel and historical programs. The idea came from Toby; development was assisted
 by OpenAI Codex. See [CREDITS.md](CREDITS.md) for component authors.
 
+The IMSAI 8080 is the iconic computer featured in **WarGames (1983)**. This project brings an experimental FPGA implementation of that computer to MiSTer. [Historical background: Computer History Museum](https://www.computerhistory.org/revolution/artifact/297/1153?position=0).
+
 ## What's new
 
 - Terminal (80 columns x 16 rows) and the smaller front panel share one screen.
