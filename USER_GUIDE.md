@@ -22,21 +22,13 @@ the panel and returns without resetting the program. STEP and POWER are display-
 The installed entries appear in MiSTer's Computer menu:
 
 | Entry | Purpose |
-
 | --- | --- |
-
 | IMSAI8080 Update - Terminal | Terminal demonstration with keyboard echo |
-
 | IMSAI8080 Update - Switch test | Simple input/output test |
-
 | IMSAI8080 Update - Complement test | Complementary output test |
-
 | IMSAI8080 Update - Kill the Lights | Historical LED game |
-
 | IMSAI8080 Update - Tiny BASIC | Palo Alto Tiny BASIC V3.0 |
-
 | IMSAI8080 Update - BASIC 4.0 | Altair 8K BASIC 4.0 |
-
 | IMSAI8080 Update - Super Star Trek | BASIC 4.0 with automatically loaded Star Trek |
 
 For Star Trek, wait for the listing to finish and COMMAND? to appear. Restarting its menu entry starts a new game.
@@ -44,23 +36,14 @@ For Star Trek, wait for the listing to finish and COMMAND? to appear. Restarting
 ## Front-panel controls
 
 | Key | Function |
-
 | --- | --- |
-
 | F1 | Toggle RUN/STOP; wait for STOP before modifying memory |
-
 | F2 | EXAMINE: enter a hexadecimal address |
-
 | F3 | Enter a hexadecimal byte to write |
-
 | F4 | DEPOSIT: write the prepared byte at the selected address while stopped |
-
 | F5 | Examine the next address |
-
 | F6 | Examine the previous address |
-
 | Enter or Escape | Finish address or byte entry |
-
 | F7 | Toggle combined terminal/panel and enlarged front panel |
 | F12 | Open the MiSTer menu |
 
