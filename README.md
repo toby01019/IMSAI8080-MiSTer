@@ -8,6 +8,16 @@ by OpenAI Codex. See [CREDITS.md](CREDITS.md) for component authors.
 
 The IMSAI 8080 is the iconic computer featured in **WarGames (1983)**. This project brings an experimental FPGA implementation of that computer to MiSTer. [Historical background: Computer History Museum](https://www.computerhistory.org/revolution/artifact/297/1153?position=0).
 
+## MEGA65 R3 and R6 front-panel update
+
+Separate MEGA65 builds now provide the combined terminal/front panel and F7 enlarged view. **The R6 build passed a short hardware test on Toby's MEGA65 R6 on 23 October 2026.** Both views, F7 text/program retention, RUN/STOP, RAM write/readback and Tiny BASIC loading/arithmetic passed. R3 is built and simulation-checked, but has not been tested on physical R3 hardware.
+
+Use only the file matching your board revision. Requires MEGA65 hardware and the existing `/IMSAI` BIN program files; historical runtime binaries are not included. Keep a known-working rollback core and preserve the factory/main core. On the MEGA65 keyboard, HELP opens the menu; F2/F4/F6 are Shift+F1/F3/F5.
+
+- [MEGA65 R3 guide](MEGA65-R3-GUIDE.md) · [R6 guide and hardware results](MEGA65-R6-GUIDE.md)
+- [Download R3/R6 update packages, sources and English guides](https://github.com/toby01019/IMSAI8080-MiSTer/releases/tag/mega65-20261023-frontpanel)
+- [Downloads on itch.io](https://toby01019.itch.io/imsai8080-mister)
+
 ## What's new
 
 - Terminal (80 columns x 16 rows) and the smaller front panel share one screen.
