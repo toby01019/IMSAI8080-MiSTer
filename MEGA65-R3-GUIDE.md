@@ -4,6 +4,22 @@ Version 0.3.0 front-panel prototype, 23 October 2026, by Toby.
 
 The original-style front panel and green 80-column terminal now share one screen. F7 enlarges the front panel; F7 again restores the combined view. The program, terminal and RUN/STOP state are preserved. LEDs and supported switch positions reflect live machine state. STEP and POWER are display-only.
 
+## Illustrated views
+
+Illustrated documentation edition, 23 October 2026. The FPGA core remains version 0.3.0; its binary is unchanged.
+
+These two views are rendered from the MEGA65 simulation, not captured from physical hardware. The R6 hardware results are documented separately below. R3 hardware remains untested.
+
+![Combined terminal and front panel — MEGA65 simulation render](mega65-combined-simulation.png)
+
+Combined terminal and front panel — MEGA65 simulation render.
+
+![Enlarged front panel with F7 — MEGA65 simulation render](mega65-f7-simulation.png)
+
+Enlarged front panel with F7 — MEGA65 simulation render.
+
+F7 switches between the combined terminal/front-panel view and the enlarged front panel. Press F7 again to return; terminal contents and program state are preserved. STEP and POWER are display-only.
+
 ## Requirements and installation
 
 This is the **R3 hardware build**. Use it only with the matching MEGA65 board revision. R3A is not separately verified. The R3 and R6 files are independently compiled; do not interchange them.
