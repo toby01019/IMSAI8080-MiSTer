@@ -1,5 +1,7 @@
 # IMSAI 8080 for MiSTer -- Prototype
 
+**Discussion and test reports:** [Join the IMSAI 8080 thread on the MiSTer FPGA Discord](https://discord.com/channels/647909397477195803/1563303117947277443). A Discord account and access to the MiSTer FPGA server are required.
+
 **Front-panel update / 23 October 2026 / MiSTer by Toby**
 
 An experimental IMSAI 8080 FPGA core with a green terminal, a virtual LED front
