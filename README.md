@@ -10,6 +10,13 @@ The IMSAI 8080 is the iconic computer featured in **WarGames (1983)**. This proj
 
 ## MEGA65 R3 and R6 front-panel update
 
+![MEGA65 combined terminal and front panel — simulation render](mega65-combined-simulation.png)
+
+![MEGA65 enlarged front panel with F7 — simulation render](mega65-f7-simulation.png)
+
+These two images are rendered from the MEGA65 simulation, not captured from hardware. The R6 hardware test results are documented separately below. The later MiSTer screenshots show MiSTer output.
+
+
 Separate MEGA65 builds now provide the combined terminal/front panel and F7 enlarged view. **The R6 build passed a short hardware test on Toby's MEGA65 R6 on 23 October 2026.** Both views, F7 text/program retention, RUN/STOP, RAM write/readback and Tiny BASIC loading/arithmetic passed. R3 is built and simulation-checked, but has not been tested on physical R3 hardware.
 
 Use only the file matching your board revision. Requires MEGA65 hardware and the existing `/IMSAI` BIN program files; historical runtime binaries are not included. Keep a known-working rollback core and preserve the factory/main core. On the MEGA65 keyboard, HELP opens the menu; F2/F4/F6 are Shift+F1/F3/F5.
