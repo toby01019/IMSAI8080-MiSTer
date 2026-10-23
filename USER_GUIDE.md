@@ -1,5 +1,19 @@
 # User guide -- 23 October 2026
 
+## Kurz erklärt: F1 bis F7
+
+| Taste | Funktion |
+|---|---|
+| **F1** | Programm anhalten (STOP) oder weiterlaufen lassen (RUN). |
+| **F2** | Speicheradresse auswählen und ihren Inhalt ansehen. |
+| **F3** | Neuen Wert zum Schreiben vorbereiten - ändert noch nichts. |
+| **F4** | Den vorbereiteten Wert an die ausgewählte Adresse schreiben. |
+| **F5** | Nächste Speicheradresse ansehen. |
+| **F6** | Vorherige Speicheradresse ansehen. |
+| **F7** | Zwischen gemeinsamer Terminal-/Frontplattenansicht und großer Frontplatte wechseln. |
+
+**F2 bis F6 funktionieren im STOP-Zustand. Nur F4 verändert den Speicher. F7 wechselt nur die Ansicht: Ein laufendes Programm läuft weiter, ein angehaltenes bleibt angehalten.**
+
 The default screen combines the 80 x 16 terminal and smaller panel. F7 enlarges
 the panel and returns without resetting the program. STEP and POWER are display-only.
 
