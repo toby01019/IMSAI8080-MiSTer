@@ -6,9 +6,9 @@ The original-style front panel and green 80-column terminal now share one screen
 
 ## Illustrated views
 
-Illustrated documentation edition, 23 October 2026. The FPGA core remains version 0.3.0; its binary is unchanged.
+Illustrated documentation updated 27 October 2026 with the anonymous R3 hardware report. The FPGA core remains version 0.3.0; its binary is unchanged.
 
-These two views are rendered from the MEGA65 simulation, not captured from physical hardware. The R6 hardware results are documented separately below. R3 hardware remains untested.
+These two views are rendered from the MEGA65 simulation, not captured from physical hardware. The R6 hardware results are documented separately below. Version 0.3.0 was successfully tested on a physical MEGA65 R3 by a community user on 27 October 2026, explicitly including F7 zoom.
 
 ![Combined terminal and front panel — MEGA65 simulation render](mega65-combined-simulation.png)
 
@@ -48,7 +48,13 @@ For Kill the Lights, keys 1–8 operate the input switches as in the previous ve
 
 The integrated MEGA65 simulation checks boot, typed echo, LEDs, stopped-memory deposit, F7 in STOP and RUN, preserved terminal and RAM, visible RGB and blanking alignment, and panel scaling. Separate regression tests exercise the BIN loader and Tiny BASIC `PRINT 6*7 = 42`. The board-specific FPGA build, timing and core header/CRC have been checked; reports are included.
 
-**This new release has not been tested on real R3 or R6 hardware.** Older release hardware results do not validate this update. Simulated previews are labelled as such. Complete game play and physical HDMI/keyboard/SD operation remain to be verified. The framework and existing menu firmware are unchanged; external I/O exceptions from its timing constraints remain.
+**Version 0.3.0 has now been successfully tested on physical R3 hardware by a community user, including F7 zoom (27 October 2026).** The R6 build separately passed short hardware checks on 23 October 2026. Simulated previews remain labelled as such. Complete game play and exhaustive HDMI/keyboard/SD coverage have not been established. The framework and existing menu firmware are unchanged; external I/O exceptions from its timing constraints remain.
+
+## R3 community hardware report — 27 October 2026
+
+On 27 October 2026, a community user reported that version 0.3.0 works perfectly on a physical MEGA65 R3, explicitly including F7 zoom. This is a user-reported hardware result; no detailed per-function checklist was supplied. R3A was not separately identified or tested in this report.
+
+This documentation update does not change the v0.3.0 FPGA core or program files. The illustrated views above remain simulation renders.
 
 ## First hardware check
 
@@ -67,4 +73,4 @@ Setup slack: +0.344 ns; hold slack: +0.049 ns; pulse-width slack: +0.264 ns.
 | Block RAM Tile | 137.5 | 365 | 37.67% |
 | DSPs | 58 | 740 | 7.84% |
 
-The DRC report contains warnings, not a warning-free certification. The R3 warning summary matches the previous v0.2.1 R6 baseline (143 warnings across CHECK-3, DPIP-1, DPOP-1, DPOP-2, REQP-1580 and REQP-1839). Read the board-specific report for the actual list. Async RAM-control and framework pipelining warnings remain; physical testing is still required.
+The DRC report contains warnings, not a warning-free certification. The R3 warning summary matches the previous v0.2.1 R6 baseline (143 warnings across CHECK-3, DPIP-1, DPOP-1, DPOP-2, REQP-1580 and REQP-1839). Read the board-specific report for the actual list. Async RAM-control and framework pipelining warnings remain; further physical testing remains useful for broader compatibility coverage.

@@ -6,9 +6,9 @@ The original-style front panel and green 80-column terminal now share one screen
 
 ## Illustrated views
 
-Illustrated documentation edition, 23 October 2026. The FPGA core remains version 0.3.0; its binary is unchanged.
+Illustrated documentation updated 27 October 2026 with the anonymous R3 hardware report. The FPGA core remains version 0.3.0; its binary is unchanged.
 
-These two views are rendered from the MEGA65 simulation, not captured from physical hardware. The R6 hardware results are documented separately below. R3 hardware remains untested.
+These two views are rendered from the MEGA65 simulation, not captured from physical hardware. The R6 hardware results are documented separately below. Version 0.3.0 was successfully tested on a physical MEGA65 R3 by a community user on 27 October 2026, explicitly including F7 zoom.
 
 ![Combined terminal and front panel — MEGA65 simulation render](mega65-combined-simulation.png)
 
@@ -48,7 +48,7 @@ For Kill the Lights, keys 1–8 operate the input switches as in the previous ve
 
 The integrated MEGA65 simulation checks boot, typed echo, LEDs, stopped-memory deposit, F7 in STOP and RUN, preserved terminal and RAM, visible RGB and blanking alignment, and panel scaling. Separate regression tests exercise the BIN loader and Tiny BASIC `PRINT 6*7 = 42`. The board-specific FPGA build, timing and core header/CRC have been checked; reports are included.
 
-The R6 short hardware test below passed. R3 hardware remains untested. Simulated previews are labelled as such. The framework and existing menu firmware are unchanged; external I/O exceptions from its timing constraints remain.
+The R6 short hardware test below passed. Version 0.3.0 was successfully tested on a physical MEGA65 R3 by a community user on 27 October 2026, explicitly including F7 zoom. Simulated previews are labelled as such. The framework and existing menu firmware are unchanged; external I/O exceptions from its timing constraints remain.
 
 ## R6 hardware test — 23 October 2026
 
@@ -65,9 +65,15 @@ The version 0.3.0 front-panel core was installed in slot 5 of Toby's physical ME
 | Program retention across F7 | Entered 10 PRINT "HALLO", switched views twice, then RUN prints HALLO. |
 | Resume after STOP | After STOP and RUN, PRINT 2+3 returns 5. |
 
-This is a successful short hardware smoke test, not an exhaustive compatibility or endurance test. R3 hardware, complete game play, every switch/LED and external peripheral operation remain unverified. STEP and POWER remain display-only.
+This is a successful short hardware smoke test, not an exhaustive compatibility or endurance test. The R3 community report below confirms operation including F7 zoom; complete game play, every switch/LED and external peripheral operation remain unverified. STEP and POWER remain display-only.
 
 Only the previous IMSAI slot 5 was replaced, with Toby's explicit authorization. Its v0.2.1 rollback COR file was preserved and hash-verified. The main core and other slots were not programmed; the SD-card MEGA65.ROM and MEGA65.D81 hashes matched before and after transfer. No full readback comparison of all flash slots was performed.
+
+## R3 community hardware report — 27 October 2026
+
+On 27 October 2026, a community user reported that version 0.3.0 works perfectly on a physical MEGA65 R3, explicitly including F7 zoom. This is a user-reported hardware result; no detailed per-function checklist was supplied. R3A was not separately identified or tested in this report.
+
+This documentation update does not change the v0.3.0 FPGA core or program files. The illustrated views above remain simulation renders.
 
 ## First hardware check
 

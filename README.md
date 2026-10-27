@@ -23,7 +23,7 @@ The complete earlier packages include the games and BASIC program files. Keep th
 
 ![MEGA65 enlarged front panel with F7 — simulation render](mega65-f7-simulation.png)
 
-These are **simulation renders**, not hardware captures. R6 passed short display, F7, RUN/STOP, memory and Tiny BASIC checks on Toby’s MEGA65 on 23 October 2026. The new R3 build is simulation-checked and awaits physical testing.
+These are **simulation renders**, not hardware captures. R6 passed short display, F7, RUN/STOP, memory and Tiny BASIC checks on Toby’s MEGA65 on 23 October 2026. **Version 0.3.0 was successfully tested on a physical MEGA65 R3 by a community user on 27 October 2026, explicitly including F7 zoom.** R3A and a detailed per-function R3 checklist remain unconfirmed.
 
 - [Download R3/R6 update packages, sources and English guides](https://github.com/toby01019/IMSAI8080-MiSTer/releases/tag/mega65-20261023-frontpanel)
 - [MEGA65 R3 guide](MEGA65-R3-GUIDE.md) · [R6 guide and hardware results](MEGA65-R6-GUIDE.md)
