@@ -4,6 +4,14 @@ The computer featured in **WarGames (1983)**, brought to MiSTer and MEGA65 as FP
 
 **Discussion and test reports:** [IMSAI 8080 on MiSTer FPGA Discord](https://discord.com/channels/647909397477195803/1563303117947277443) (Discord account/server access required).
 
+## Start here — complete MiSTer installation
+
+1. [Download the complete MiSTer ZIP](https://github.com/toby01019/IMSAI8080-MiSTer/releases/download/mister-downloader-20261028-games/IMSAI8080-MiSTer-Downloader-20261028-games.zip) and extract it on your computer.
+2. Copy the **contents of SD** to the root of the MiSTer SD card, merging `_Computer`, `games` and `docs`. Preserve customized files and existing cores.
+3. Start **Computer → IMSAI8080 - Terminal (Updater)** or one of the included program entries.
+
+The current package is ready for manual installation. Automatic installation through Update All is **requested, not yet accepted**: [request #21](https://github.com/theypsilon/MultiDatabases_MiSTer/pull/21). The prepared database uses the official MiSTer Downloader; no separate installer is required. Older releases are retained as archives for existing links and rollback.
+
 ## Games and applications
 
 - **Super Star Trek** — based on Mike Mayfield’s *Star Trek* (1971), expanded by Bob Leedom in 1974 and popularized through David H. Ahl’s *BASIC Computer Games*. This version uses the May 1978 BASIC listing.
