@@ -17,19 +17,23 @@
 The default screen combines the 80 x 16 terminal and smaller panel. F7 enlarges
 the panel and returns without resetting the program. STEP and POWER are display-only.
 
+## Installation — complete package
+
+Download IMSAI8080-MiSTer-Downloader-20261028-games.zip from the [complete release](https://github.com/toby01019/IMSAI8080-MiSTer/releases/tag/mister-downloader-20261028-games). Extract it and copy the contents of SD to the MiSTer SD card root: _Computer, games and docs. No earlier installation or BIOS is required. Preserve customized files and existing cores.
+
 ## Starting a program
 
 The installed entries appear in MiSTer's Computer menu:
 
 | Entry | Purpose |
 | --- | --- |
-| IMSAI8080 Update - Terminal | Terminal demonstration with keyboard echo |
-| IMSAI8080 Update - Switch test | Simple input/output test |
-| IMSAI8080 Update - Complement test | Complementary output test |
-| IMSAI8080 Update - Kill the Lights | Historical LED game |
-| IMSAI8080 Update - Tiny BASIC | Palo Alto Tiny BASIC V3.0 |
-| IMSAI8080 Update - BASIC 4.0 | Altair 8K BASIC 4.0 |
-| IMSAI8080 Update - Super Star Trek | BASIC 4.0 with automatically loaded Star Trek |
+| IMSAI8080 - Terminal (Updater) | Terminal demonstration with keyboard echo |
+| IMSAI8080 - Switch test (Updater) | Simple input/output test |
+| IMSAI8080 - Complement test (Updater) | Complementary output test |
+| IMSAI8080 - Kill the Lights (Updater) | Historical LED game |
+| IMSAI8080 - Tiny BASIC (Updater) | Palo Alto Tiny BASIC V3.0 |
+| IMSAI8080 - BASIC 4.0 (Updater) | Altair 8K BASIC 4.0 |
+| IMSAI8080 - Super Star Trek (Updater) | BASIC 4.0 with automatically loaded Star Trek |
 
 For Star Trek, wait for the listing to finish and COMMAND? to appear. Restarting its menu entry starts a new game.
 
