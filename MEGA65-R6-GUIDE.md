@@ -1,6 +1,6 @@
 # IMSAI 8080 for MEGA65 R6: front-panel update
 
-Version 0.3.0 front-panel prototype, 23 October 2026, by Toby.
+Version 0.3.0 front-panel release, 23 October 2026, by Toby.
 
 The original-style front panel and green 80-column terminal now share one screen. F7 enlarges the front panel; F7 again restores the combined view. The program, terminal and RUN/STOP state are preserved. LEDs and supported switch positions reflect live machine state. STEP and POWER are display-only.
 
@@ -26,7 +26,7 @@ This is the **R6 hardware build**. Use it only with the matching MEGA65 board re
 
 Keep your current working core and factory/recovery slot. This package has a distinct filename, `PANELR6.COR`. Copy it to the SD card without replacing an older core. Select an available non-factory slot in the NO SCROLL startup menu and check the target before installing. Do not interrupt a flash operation. Installation on Toby's R6 and the confirmed hardware checks are documented below.
 
-Keep your existing `/IMSAI` program directory and BIN files from the previous release. Historical BASIC and game binaries are not duplicated in this update. Open **HELP → Programs → BIN** to load a program. HELP closes the menu.
+The complete packages on the [MEGA65 Filehost](https://files.mega65.org?id=805eb9b2-856c-47e8-87ca-2ba921ec94a0) include the /IMSAI games and BASIC files. Choose Filehost 1.8 for R3 or 1.9 for R6. Extract the ZIP and copy the contents of SD to the SD-card root, preserving customized files. No previous package is required. Open **HELP → Programs → BIN** to load a program. HELP closes the menu.
 
 ## Controls on the MEGA65 keyboard
 
